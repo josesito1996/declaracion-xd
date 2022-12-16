@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Nobia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #MyImage {
+            position: relative;
+            margin: 20px auto 0;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        #theImage {
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+
+        #myButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+    </style>
+    <script>
+        function accionParaCuandoEllaDigaQueSi() {
+            alert('ahora ya somos nobios <3');
+        }
+
+        function mueveElBoton() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+
+            newWidth = (Math.random() * width);
+            newHeight = (Math.random() * height);
+
+            document.getElementById('btnNo').style.position = "absolute";
+            document.getElementById('btnNo').style.left = newWidth + "px";
+            document.getElementById('btnNo').style.top = newHeight + "px";
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="MyImage">
+        <h1 class="text-center">Quieres ser mi nobia ???</h1>
+        <img id="theImage" src="https://cdnj.upsocl.com/wp-content/uploads/2017/04/jsrhstd-1024x555.jpg" />
+        <input class="btn btn-success" type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Si" />
+        <input class="btn btn-danger" type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
+    </div>
+
+</body>
+
+</html>
